@@ -1,0 +1,12 @@
+*.iml
+gradlew
+gradlew.*
+local.properties
+.externalNativeBuild/
+.google/
+.gradle/
+.idea/
+.vs/
+build/
+gradle/
+

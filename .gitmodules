@@ -1,0 +1,21 @@
+[submodule "External/osg-3rdparty-cmake"]
+	path = External/osg-3rdparty-cmake
+	url = https://github.com/djangw/osg-3rdparty-cmake
+[submodule "External/curl"]
+	path = External/curl
+	url = https://github.com/curl/curl
+[submodule "External/freetype2"]
+	path = External/freetype2
+	url = git://git.sv.nongnu.org/freetype/freetype2.git
+[submodule "External/jpeg"]
+	path = External/jpeg
+	url = https://github.com/libjpeg-turbo/ijg
+[submodule "External/lpng"]
+	path = External/lpng
+	url = https://git.code.sf.net/p/libpng/code
+[submodule "External/libtiff"]
+	path = External/libtiff
+	url = https://github.com/vadz/libtiff
+[submodule "External/OpenSceneGraph"]
+	path = External/OpenSceneGraph
+	url = https://github.com/openscenegraph/OpenSceneGraph

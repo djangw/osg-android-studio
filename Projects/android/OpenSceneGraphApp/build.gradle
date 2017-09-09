@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        applicationId 'com.android.osg'
+        minSdkVersion 14
+        targetSdkVersion 25
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+        externalNativeBuild {
+            cmake {
+                arguments "-DOPENGL_PROFILE=GLES2",
+                        "-DDYNAMIC_OPENTHREADS=OFF",
+                        "-DDYNAMIC_OPENSCENEGRAPH=OFF",
+                        "-DCURL_SOURCE_DIR=../../../External/curl",
+                        "-DFREETYPE_SOURCE_DIR=../../../External/freetype2",
+                        "-DLIBJPEG_SOURCE_DIR=../../../External/jpeg",
+                        "-DLIBTIFF_SOURCE_DIR=../../../External/libtiff",
+                        "-DLIBPNG_SOURCE_DIR=../../../External/lpng"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                          'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path '../../../CMakeLists.txt'
+        }
+    }
+}
+
